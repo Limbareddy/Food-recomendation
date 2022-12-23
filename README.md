@@ -1,2 +1,4 @@
 # Food-recomendation
-Created with CodeSandbox
+
+This project is built with Reactjs.
+It recomends set of dishes for selected type of food.
