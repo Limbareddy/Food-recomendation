@@ -3,20 +3,20 @@ import React, { useState } from "react";
 
 var fooddata = {
   Healthy: [
-    { type: " Sprouts", rating: "4/5" },
-    { type: "Fruits ", rating: "3/5" },
-    { type: "Local variety rice", rating: " 5/5" }
+    { type: " Sprouts", rating: "4/5" ,description:"It gives energy to our metabolism"},
+    { type: "Fruits ", rating: "3/5",description:" They gives essential vitamins to our body"},
+    { type: "Local variety rice", rating: " 5/5",description:"It contains anti-bodies" }
   ],
 
   Biryanis: [
-    { type: "Mutton Biryani", rating: "4/5" },
-    { type: "Nalli Gosh Biryanni", rating: "5/5" },
-    { type: " Chicken Biryanni", rating: "3/5" }
+    { type: "Mutton Biryani", rating: "4/5" , description:" Tastes better with small pieces"},
+    { type: "Nalli Gosh Biryanni", rating: "5/5", description:" which contains bones of goat"},
+    { type: " Chicken Biryanni", rating: "3/5" ,  description:"Tastes better with masala "}
   ],
   veg: [
-    { type: " Mushroom", rating: "5/5" },
-    { type: " Leaf Vegetables", rating: "5/5" },
-    { type: " Paneer", rating: "3.5/5" }
+    { type: " Mushroom", rating: "5/5"  ,description:"Lowers blood pressure " },
+    { type: " Leaf Vegetables", rating: "5/5",description:"Good to our eyes"},
+    { type: " Paneer", rating: "3.5/5" ,description:" contains calcium"}
   ]
 };
 
@@ -71,7 +71,11 @@ export default function App() {
           >
             {" "}
             <div style={{ fontSize: "large" }}>{food.type}</div>
-            <div style={{ fontSize: "small" }}>{food.rating}</div>
+             <div style={{ fontSize: "medium" }}>
+              {<span>Rating : </span>}
+              {food.rating}
+            </div>
+            <div style={{ fontSize: "large" }}>{food.description}</div>
           </ul>
         ))}
       </div>
